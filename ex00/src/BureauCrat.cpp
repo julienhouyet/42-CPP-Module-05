@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:20:55 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/11 09:47:09 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/11 09:59:51 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,14 @@ Bureaucrat& Bureaucrat::operator=( const Bureaucrat& copy )
 Bureaucrat::~Bureaucrat( void )
 {
 	
+}
+
+std::string Bureaucrat::getName() const
+{
+	return this->_name;
+}
+
+int Bureaucrat::getGrade() const
+{
+	return this->_grade;
 }
