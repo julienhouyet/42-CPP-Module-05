@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:20:47 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/11 11:05:05 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/11 13:26:17 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ class Bureaucrat
 
 		void	promoteGrade( void );
 		void	demoteGrade( void );
+
+		friend std::ostream& operator<<(std::ostream& out, const Bureaucrat& bureaucrat);
 
 	private:
 		const std::string 	_name;

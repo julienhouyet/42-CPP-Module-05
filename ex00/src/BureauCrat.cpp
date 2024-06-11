@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:20:55 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/11 13:05:00 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/11 13:24:23 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,4 +108,14 @@ void Bureaucrat::demoteGrade( void )
 	{
 		throw GradeTooLowException();
 	}
+}
+
+// ************************************************************************** //
+//                             Friend Functions                               //
+// ************************************************************************** //
+
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& bureaucrat)
+{
+	out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << ".";
+	return out;
 }
