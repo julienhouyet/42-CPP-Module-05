@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:20:47 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/11 10:05:05 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/11 10:49:04 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ class Bureaucrat
 		Bureaucrat& operator=( const Bureaucrat& copy );
 		~Bureaucrat( void );
 
-		std::string getName() const;
-		int getGrade() const;
+		std::string		getName() const;
+		int 			getGrade() const;
+
+		void	promoteGrade( void );
+		void	demoteGrade( void );
 
 	private:
 		const std::string 	_name;

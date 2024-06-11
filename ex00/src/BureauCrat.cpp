@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:20:55 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/11 10:03:03 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/11 10:53:38 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Bureaucrat::~Bureaucrat( void )
 }
 
 // ************************************************************************** //
-//                           Setters & Getters                                //
+//                            Setters & Getters                               //
 // ************************************************************************** //
 
 std::string Bureaucrat::getName() const
@@ -57,4 +57,24 @@ std::string Bureaucrat::getName() const
 int Bureaucrat::getGrade() const
 {
 	return this->_grade;
+}
+
+// ************************************************************************** //
+//                         Public Member Functions                            //
+// ************************************************************************** //
+
+void Bureaucrat::promoteGrade( void )
+{
+	if (this->_grade > 1)
+	{
+		this->_grade--;	
+	}
+}
+
+void Bureaucrat::demoteGrade( void )
+{
+	if (this->_grade < 150)
+	{
+		this->_grade++;	
+	}
 }
