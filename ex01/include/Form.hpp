@@ -6,13 +6,15 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:37:21 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 09:37:36 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 10:12:06 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #ifndef __FORM_H__
 #define __FORM_H__
+
+#include "Bureaucrat.hpp"
 
 #include <iostream>
 #include <string>
@@ -46,8 +48,8 @@ class Form
 
 		std::string getName() const;
 		bool		getIsSigned() const;
-		const int	getGradeToSign() const;
-		const int 	getGradeToExecute() const;
+		int			getGradeToSign() const;
+		int 		getGradeToExecute() const;
 
 		void		beSigned(Bureaucrat& bureaucrat);
 
