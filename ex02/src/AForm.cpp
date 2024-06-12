@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:37:36 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 11:01:19 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 11:17:57 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
 // ************************************************************************** //
-//                                  Form Class                                //
+//                                  AForm Class                                //
 // ************************************************************************** //
 
-Form::Form( void ) : _name("Unknow"), _isSigned(false), _gradeToSign(150), _gradeToExecute(150)
+AForm::AForm( void ) : _name("Unknow"), _isSigned(false), _gradeToSign(150), _gradeToExecute(150)
 {
 	
 }
 
-Form::Form( std::string name, int gradeToSign, int gradeToExecute ) : _name(name), _isSigned(false), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
+AForm::AForm( std::string name, int gradeToSign, int gradeToExecute ) : _name(name), _isSigned(false), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
 {
 	if (this->_gradeToSign < 1 || this->_gradeToExecute < 1)
 	{
@@ -33,7 +33,7 @@ Form::Form( std::string name, int gradeToSign, int gradeToExecute ) : _name(name
 	}
 }
 
-Form::Form( const Form& copy ) : _name(copy._name), _isSigned(copy._isSigned), _gradeToSign(copy._gradeToSign), _gradeToExecute(copy._gradeToExecute)
+AForm::AForm( const AForm& copy ) : _name(copy._name), _isSigned(copy._isSigned), _gradeToSign(copy._gradeToSign), _gradeToExecute(copy._gradeToExecute)
 {
 	if (copy._gradeToSign < 1 || copy._gradeToExecute < 1)
 	{
@@ -45,7 +45,7 @@ Form::Form( const Form& copy ) : _name(copy._name), _isSigned(copy._isSigned), _
 	}
 }
 
-Form& Form::operator=( const Form& copy )
+AForm& AForm::operator=( const AForm& copy )
 {
 	if (this != &copy)
 	{
@@ -61,7 +61,7 @@ Form& Form::operator=( const Form& copy )
 	return *this;
 }
 
-Form::~Form( void )
+AForm::~AForm( void )
 {
 	
 }
@@ -70,22 +70,22 @@ Form::~Form( void )
 //                            Setters & Getters                               //
 // ************************************************************************** //
 
-std::string Form::getName() const
+std::string AForm::getName() const
 {
 	return this->_name;
 }
 
-bool Form::getIsSigned() const
+bool AForm::getIsSigned() const
 {
 	return this->_isSigned;
 }
 
-int Form::getGradeToSign() const
+int AForm::getGradeToSign() const
 {
 	return this->_gradeToExecute;
 }
 
-int Form::getGradeToExecute() const
+int AForm::getGradeToExecute() const
 {
 	return this->_gradeToExecute;
 }
@@ -94,7 +94,7 @@ int Form::getGradeToExecute() const
 //                         Public Member Functions                            //
 // ************************************************************************** //
 
-void Form::beSigned(Bureaucrat& bureaucrat)
+void AForm::beSigned(Bureaucrat& bureaucrat)
 {
 	if (bureaucrat.getGrade() > this->_gradeToSign)
 	{
@@ -108,7 +108,7 @@ void Form::beSigned(Bureaucrat& bureaucrat)
 //                             Friend Functions                               //
 // ************************************************************************** //
 
-std::ostream& operator<<(std::ostream& out, const Form& form)
+std::ostream& operator<<(std::ostream& out, const AForm& form)
 {
 	out << 
 	"--- Form informations ---\n" << 

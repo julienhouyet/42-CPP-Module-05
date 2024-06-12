@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #pragma once
-#ifndef __FORM_H__
-#define __FORM_H__
+#ifndef __AFORM_H__
+#define __AFORM_H__
 
 #include "Bureaucrat.hpp"
 
@@ -20,12 +20,12 @@
 #include <string>
 
 // ************************************************************************** //
-//                                  Form Class                                //
+//                                  AForm Class                                //
 // ************************************************************************** //
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
 	public:
 		class GradeTooHighException : public std::exception {
@@ -42,11 +42,11 @@ class Form
 			}
 		};
 	
-		Form( void );
-		Form( std::string name, int gradeToSign, int gradeToExecute );
-		Form( const Form& copy );
-		Form& operator=( const Form& copy );
-		~Form( void );
+		AForm( void );
+		AForm( std::string name, int gradeToSign, int gradeToExecute );
+		AForm( const AForm& copy );
+		AForm& operator=( const AForm& copy );
+		~AForm( void );
 
 		std::string getName() const;
 		bool		getIsSigned() const;
@@ -55,7 +55,7 @@ class Form
 
 		void		beSigned(Bureaucrat& bureaucrat);
 
-		friend std::ostream& operator<<(std::ostream& out, const Form& form);
+		friend std::ostream& operator<<(std::ostream& out, const AForm& form);
 
 	private:
 		const std::string 	_name;

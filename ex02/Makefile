@@ -6,7 +6,7 @@
 #    By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 09:20:05 by jhouyet           #+#    #+#              #
-#    Updated: 2024/06/11 13:38:29 by jhouyet          ###   ########.fr        #
+#    Updated: 2024/06/12 11:18:35 by jhouyet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ INC_DIR		= include
 OBJ_DIR 	= obj
 
 SRC 		= 	$(SRC_DIR)/Bureaucrat.cpp \
-				$(SRC_DIR)/Form.cpp \
+				$(SRC_DIR)/AForm.cpp \
 				$(SRC_DIR)/main.cpp
 				
 OBJ			= $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
