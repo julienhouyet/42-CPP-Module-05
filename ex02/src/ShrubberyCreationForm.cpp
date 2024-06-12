@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 12:53:38 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 16:20:31 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 16:29:21 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,10 @@ ShrubberyCreationForm::~ShrubberyCreationForm( void )
 {
 	
 }
+
+// ************************************************************************** //
+//                         Public Member Functions                            //
+// ************************************************************************** //
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
