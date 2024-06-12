@@ -6,7 +6,7 @@
 #    By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/11 09:20:05 by jhouyet           #+#    #+#              #
-#    Updated: 2024/06/12 16:40:31 by jhouyet          ###   ########.fr        #
+#    Updated: 2024/06/12 16:52:32 by jhouyet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC 		= 	$(SRC_DIR)/Bureaucrat.cpp \
 				$(SRC_DIR)/AForm.cpp \
 				$(SRC_DIR)/ShrubberyCreationForm.cpp \
 				$(SRC_DIR)/RobotomyRequestForm.cpp \
+				$(SRC_DIR)/PresidentialPardonForm.cpp \
 				$(SRC_DIR)/main.cpp
 				
 OBJ			= $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)

@@ -6,13 +6,14 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:21:28 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 16:49:42 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 16:56:21 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 #include <iostream>
 
@@ -52,6 +53,28 @@ int	main()
 		std::cout << form2 << std::endl;
 		std::cout << " " << std::endl;
 		lucas.executeForm(form2);
+	} catch (const Bureaucrat::GradeTooHighException& e) {
+		std::cerr << "Exception caught: " << e.what() << std::endl;
+	} catch (const Bureaucrat::GradeTooLowException& e) {
+		std::cerr << "Exception caught: " << e.what() << std::endl;
+	}
+
+	std::cout << " " << std::endl;
+	std::cout << " " << std::endl;
+	std::cout << " " << std::endl;
+	
+	try {
+		Bureaucrat victor("Victor", 1);
+		std::cout << victor << std::endl;
+		std::cout << " " << std::endl;
+		PresidentialPardonForm form3("Victor");
+		std::cout << form3 << std::endl;
+		std::cout << " " << std::endl;
+		victor.signForm(form3);
+		std::cout << " " << std::endl;
+		std::cout << form3 << std::endl;
+		std::cout << " " << std::endl;
+		victor.executeForm(form3);
 	} catch (const Bureaucrat::GradeTooHighException& e) {
 		std::cerr << "Exception caught: " << e.what() << std::endl;
 	} catch (const Bureaucrat::GradeTooLowException& e) {
