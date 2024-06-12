@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:13:15 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 19:08:00 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 19:24:30 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "PresidentialPardonForm.hpp"
 
 // ************************************************************************** //
-//                            Bureaucrat Class                                //
+//                               Intern Class                                 //
 // ************************************************************************** //
 
 Intern::Intern( void )
@@ -43,6 +43,10 @@ Intern::~Intern( void )
 	
 }
 
+// ************************************************************************** //
+//                         Public Member Functions                            //
+// ************************************************************************** //
+
 AForm* Intern::makeForm(std::string name, std::string target) const
 {
     std::string forms[] = { "robotomy request", "shrubbery creation", "presidential pardon" };
@@ -59,6 +63,9 @@ AForm* Intern::makeForm(std::string name, std::string target) const
     return nullptr;
 }
 
+// ************************************************************************** //
+//                        Private Member Functions                            //
+// ************************************************************************** //
 
 AForm* Intern::_newShrubberyCreationForm(std::string target) const
 {
