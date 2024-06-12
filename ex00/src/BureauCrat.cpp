@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:20:55 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 09:59:45 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 10:07:08 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ Bureaucrat::Bureaucrat( const Bureaucrat& copy ) : _name(copy._name), _grade(cop
 	{
 		throw GradeTooLowException();
 	}
-	*this = copy;
 }
 
 Bureaucrat& Bureaucrat::operator=( const Bureaucrat& copy )
