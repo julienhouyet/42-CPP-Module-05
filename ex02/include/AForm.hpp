@@ -20,7 +20,7 @@
 #include <string>
 
 // ************************************************************************** //
-//                                  AForm Class                                //
+//                                 AForm Class                                //
 // ************************************************************************** //
 
 class Bureaucrat;
@@ -46,7 +46,7 @@ class AForm
 		AForm( std::string name, int gradeToSign, int gradeToExecute );
 		AForm( const AForm& copy );
 		AForm& operator=( const AForm& copy );
-		~AForm( void );
+		virtual ~AForm( void );
 
 		std::string getName() const;
 		bool		getIsSigned() const;
