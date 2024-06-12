@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:20:55 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 11:20:25 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 11:24:03 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ void Bureaucrat::demoteGrade( void )
 	}
 }
 
-void Bureaucrat::signAForm(AForm& form)
+void Bureaucrat::signForm(AForm& form)
 {
     try
     {
