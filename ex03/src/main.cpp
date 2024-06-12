@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:21:28 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 18:43:45 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 19:08:38 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,32 @@ int	main()
         AForm* rrf;
 
         rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+        delete rrf;
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << "Exception: " << e.what() << std::endl;
+    }
+
+    try
+    {
+        Intern someRandomIntern;
+        AForm* rrf;
+
+        rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+        delete rrf;
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << "Exception: " << e.what() << std::endl;
+    }
+	
+    try
+    {
+        Intern someRandomIntern;
+        AForm* rrf;
+
+        rrf = someRandomIntern.makeForm("presidential pardon", "Bender");
         delete rrf;
     }
     catch (std::exception &e)

@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:13:15 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 18:46:08 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 19:08:00 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
 
 Intern::Intern( void )
 {
-	
+    _formCreationMethods[0] = &Intern::_newRobotomyRequestForm;
+    _formCreationMethods[1] = &Intern::_newShrubberyCreationForm;
+    _formCreationMethods[2] = &Intern::_newPresidentialPardonForm;
 }
 
 Intern::Intern( const Intern& copy )
@@ -43,9 +45,18 @@ Intern::~Intern( void )
 
 AForm* Intern::makeForm(std::string name, std::string target) const
 {
-	std::cout << name << std::endl;
-	std::cout << target << std::endl;
-	return nullptr;
+    std::string forms[] = { "robotomy request", "shrubbery creation", "presidential pardon" };
+
+    for (int i = 0; i < 3; ++i)
+    {
+        if (forms[i] == name)
+        {
+            std::cout << "Intern creates " << name << std::endl;
+            return (this->*_formCreationMethods[i])(target);
+        }
+    }
+    std::cerr << "Unknown form: " << name << std::endl;
+    return nullptr;
 }
 
 
