@@ -82,7 +82,7 @@ bool AForm::getIsSigned() const
 
 int AForm::getGradeToSign() const
 {
-	return this->_gradeToExecute;
+	return this->_gradeToSign;
 }
 
 int AForm::getGradeToExecute() const

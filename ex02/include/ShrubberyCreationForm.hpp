@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 12:53:32 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 13:19:15 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 15:37:46 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class ShrubberyCreationForm : public AForm
 		ShrubberyCreationForm( const ShrubberyCreationForm& copy );
 		ShrubberyCreationForm& operator=( const ShrubberyCreationForm& copy );
 		~ShrubberyCreationForm( void );
+
+		void execute(Bureaucrat const & executor) const;
 
 	private:
 		const std::string _target;

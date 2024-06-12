@@ -41,6 +41,13 @@ class AForm
 				return "Grade is too low!";
 			}
 		};
+
+		class FormUnsignedException : public std::exception {
+		public:
+			virtual const char* what() const throw() {
+				return "Form is not signed!";
+			}
+		};
 	
 		AForm( void );
 		AForm( std::string name, int gradeToSign, int gradeToExecute );
@@ -48,12 +55,14 @@ class AForm
 		AForm& operator=( const AForm& copy );
 		virtual ~AForm( void );
 
-		std::string getName() const;
-		bool		getIsSigned() const;
-		int			getGradeToSign() const;
-		int 		getGradeToExecute() const;
+		std::string 	getName() const;
+		bool			getIsSigned() const;
+		int				getGradeToSign() const;
+		int 			getGradeToExecute() const;
 
-		void		beSigned(Bureaucrat& bureaucrat);
+		void			beSigned(Bureaucrat& bureaucrat);
+
+		virtual void 	execute(Bureaucrat const & executor) const = 0;
 
 		friend std::ostream& operator<<(std::ostream& out, const AForm& form);
 

@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:37:36 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 11:01:19 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 15:51:46 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ bool Form::getIsSigned() const
 
 int Form::getGradeToSign() const
 {
-	return this->_gradeToExecute;
+	return this->_gradeToSign;
 }
 
 int Form::getGradeToExecute() const

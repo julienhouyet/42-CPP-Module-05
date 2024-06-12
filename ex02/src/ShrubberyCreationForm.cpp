@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 12:53:38 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 13:29:20 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 15:48:02 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,17 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=( const ShrubberyCreation
 ShrubberyCreationForm::~ShrubberyCreationForm( void )
 {
 	
+}
+
+void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+{
+    if (!this->getIsSigned())
+    {
+        throw AForm::FormUnsignedException();
+    }
+    if (executor.getGrade() > this->getGradeToExecute())
+    {
+        throw AForm::GradeTooLowException();
+    }
+	std::cerr << "YAHOUUUUU" << std::endl;
 }
