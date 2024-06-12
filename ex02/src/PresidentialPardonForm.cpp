@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 12:54:12 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 16:55:05 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 18:41:57 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 //                          PresidentialPardonForm Class                         //
 // ************************************************************************** //
 
-PresidentialPardonForm::PresidentialPardonForm( void ) : AForm("PresidentialPardonForm", 25, 5)
+PresidentialPardonForm::PresidentialPardonForm( void ) : AForm("PresidentialPardonForm", 25, 5), _target("unknowTarget")
 {
 	
 }

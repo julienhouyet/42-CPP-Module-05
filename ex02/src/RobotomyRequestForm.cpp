@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 12:53:47 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 16:51:01 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 18:41:53 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 //                          RobotomyRequestForm Class                         //
 // ************************************************************************** //
 
-RobotomyRequestForm::RobotomyRequestForm( void ) : AForm("RobotomyRequestForm", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm( void ) : AForm("RobotomyRequestForm", 72, 45), _target("unknowTarget")
 {
 	
 }
