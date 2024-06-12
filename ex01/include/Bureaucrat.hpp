@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BureauCrat.hpp                                     :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:20:47 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/11 13:26:17 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 10:53:33 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 #ifndef __BUREAUCRAT_H__
 #define __BUREAUCRAT_H__
 
+#include "Form.hpp"
+
 #include <iostream>
 #include <string>
 
 // ************************************************************************** //
 //                            Bureaucrat Class                                //
 // ************************************************************************** //
+
+class Form;
 
 class Bureaucrat
 {
@@ -49,6 +53,7 @@ class Bureaucrat
 
 		void	promoteGrade( void );
 		void	demoteGrade( void );
+		void	signForm(Form& form);
 
 		friend std::ostream& operator<<(std::ostream& out, const Bureaucrat& bureaucrat);
 

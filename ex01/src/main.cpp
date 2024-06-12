@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 09:21:28 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/11 13:22:47 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 11:09:46 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,36 +16,45 @@
 
 int	main()
 {
-	try {
-		Bureaucrat julien("Julien", 2);
-		std::cout << julien << std::endl;
+	Bureaucrat julien("Julien", 1);
 
-		julien.promoteGrade();
-		std::cout << julien << std::endl;
+	std::cout << julien << std::endl;
 
-		julien.promoteGrade();
-		std::cout << julien << std::endl;
-	} catch (const Bureaucrat::GradeTooHighException& e) {
-		std::cerr << "Exception caught: " << e.what() << std::endl;
-	} catch (const Bureaucrat::GradeTooLowException& e) {
-		std::cerr << "Exception caught: " << e.what() << std::endl;
-	}
+	std::cout << " " << std::endl;
+	
+	Bureaucrat lucas("Lucas", 15);
 
-	try {
-		Bureaucrat julien("Julien", 149);
-		std::cout << julien << std::endl;
+	std::cout << lucas << std::endl;
 
-		julien.demoteGrade();
-		std::cout << julien << std::endl;
+	std::cout << " " << std::endl;
 
-		julien.demoteGrade();
-		std::cout << julien << std::endl;
+	Form formA("Form A", 10, 10);
 
-	} catch (const Bureaucrat::GradeTooHighException& e) {
-		std::cerr << "Exception caught: " << e.what() << std::endl;
-	} catch (const Bureaucrat::GradeTooLowException& e) {
-		std::cerr << "Exception caught: " << e.what() << std::endl;
-	}
+	std::cout << formA << std::endl;
+
+	std::cout << " " << std::endl;
+	
+	Form formB("Form B", 5, 5);
+
+	std::cout << formB << std::endl;
+
+	std::cout << " " << std::endl;
+
+	julien.signForm(formA);
+
+	std::cout << " " << std::endl;
+	
+	lucas.signForm(formB);
+
+	std::cout << " " << std::endl;
+
+	std::cout << formA << std::endl;
+
+	std::cout << " " << std::endl;
+	
+	std::cout << formB << std::endl;
+
+	std::cout << " " << std::endl;
 
 	return 0;
 }
