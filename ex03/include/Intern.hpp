@@ -6,7 +6,7 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:13:10 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 18:01:01 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 18:30:19 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,13 @@ class Intern
 		Intern( const Intern& copy );
 		Intern& operator=( const Intern& copy );
 		~Intern( void );
+
+		AForm* makeForm(std::string name, std::string target) const;
+
+	private:
+		AForm*	_newShrubberyCreationForm(std::string target) const;
+		AForm*	_newRobotomyRequestForm(std::string target) const;
+		AForm*	_newPresidentialPardonForm(std::string target) const;
 };
 
 #endif

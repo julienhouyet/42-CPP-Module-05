@@ -6,11 +6,14 @@
 /*   By: jhouyet <jhouyet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:13:15 by jhouyet           #+#    #+#             */
-/*   Updated: 2024/06/12 18:11:09 by jhouyet          ###   ########.fr       */
+/*   Updated: 2024/06/12 18:46:08 by jhouyet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 // ************************************************************************** //
 //                            Bureaucrat Class                                //
@@ -36,4 +39,27 @@ Intern& Intern::operator=( const Intern& copy )
 Intern::~Intern( void )
 {
 	
+}
+
+AForm* Intern::makeForm(std::string name, std::string target) const
+{
+	std::cout << name << std::endl;
+	std::cout << target << std::endl;
+	return nullptr;
+}
+
+
+AForm* Intern::_newShrubberyCreationForm(std::string target) const
+{
+	return (new ShrubberyCreationForm(target));
+}
+
+AForm*	Intern::_newRobotomyRequestForm(std::string target) const
+{
+	return (new RobotomyRequestForm(target));
+}
+
+AForm*	Intern::_newPresidentialPardonForm(std::string target) const
+{
+	return (new PresidentialPardonForm(target));
 }
